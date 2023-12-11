@@ -1,11 +1,13 @@
 import React from 'react';
 
-const Planet = ({ planet, population }) => {
+const Planet = ({ data }) => {
+    console.log("In one", data)
+    const { name, climate } = data
     return (
         <div>
-            <h1>Name</h1>
-            <h2>{planet}</h2>
-            <p>{population}</p>
+            <h1>{name}</h1>
+            <h2>{climate}</h2>
+            <p></p>
         </div>
     )
 }
