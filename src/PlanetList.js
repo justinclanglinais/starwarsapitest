@@ -1,15 +1,17 @@
 import React from 'react'
 import Planet from './Planet'
 
-const PlanetList = ( planets ) => {
-    
+const PlanetList = ( {planets} ) => {
     return (
-        <div>
-            {planets.map (p=> {
-                <Planet planet={p} key={p.id}/>
-            })}
-        </div>
+        {
+            planets.map ( (planet, id) => {
+                return (
+                    <div>
+                        <Planet planet={planet} key={id} />
+                    </div>
+                )
+            })
+        }
     )
 }
-
 export default PlanetList;
