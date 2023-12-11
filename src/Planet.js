@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Planet = ({ name, population }) => {
+const Planet = ({ planet, population }) => {
     return (
         <div>
-            <h2>{name}</h2>
+            <h1>Name</h1>
+            <h2>{planet}</h2>
             <p>{population}</p>
         </div>
     )
