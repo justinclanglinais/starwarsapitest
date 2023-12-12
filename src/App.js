@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import './App.css';
 import PlanetList from './PlanetList'
+import SearchBox from './SearchBox';
+
 
 class App extends Component {
   constructor () {
@@ -22,9 +24,16 @@ class App extends Component {
         })
       })
   }
+
+  onSearchChange = (event) => {
+    this.setState({searchField: event.target.value})
+    console.log(event.target.value)
+  }
+
   render () {
     return (
       <div>
+        <SearchBox searchChange={this.onSearchChange}/>
         <PlanetList planets={this.state.planets} />
       </div>
     )
